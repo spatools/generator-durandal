@@ -418,7 +418,6 @@ module.exports = function (grunt) {
                 'durandal',
                 <% if (features.less) { %>'less:release',
                 <% } else { %>'cssmin:release',<% } %>
-                'htmlbuild',
                 'copy:release',
                 'imagemin',
                 'svgmin'
@@ -427,7 +426,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', ['clean:server', 'copy:styles', 'autoprefixer:watch', 'connect:test', 'jasmine']);
-    grunt.registerTask('build', ['clean:release', 'concurrent:release', 'concat', 'autoprefixer:release', 'htmlmin']);
+    grunt.registerTask('build', ['clean:release', 'concurrent:release', 'concat', 'autoprefixer:release', 'htmlbuild', 'htmlmin']);
     grunt.registerTask('default', ['newer:jshint', 'test', 'build']);
 
     grunt.registerTask('serve', ['clean:server', 'concurrent:server', 'autoprefixer:watch', 'connect:livereload', 'watch']);
