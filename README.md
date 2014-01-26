@@ -1,7 +1,6 @@
 # generator-durandal [![Build Status](https://secure.travis-ci.org/spatools/generator-durandal.png?branch=master)](https://travis-ci.org/spatools/generator-durandal)
 
-A generator for [Yeoman](http://yeoman.io).
-
+Complete [Yeoman](http://yeoman.io) generator for [Durandal](http://durandaljs.com/) with subgenerators.
 
 ## Getting Started
 
