@@ -1,0 +1,12 @@
+{
+	"name": "<%= appid %>",
+	"version": "0.0.0",
+	"dependencies": {
+		<% if (features.bootstrap) { %>"bootstrap": ">=3.0.0",<% } %>
+		<% if (features.fontawesome) { %>"font-awesome": ">=4.0.0",<% } %>
+		<% if (features.modernizr) { %>"modernizr": "~2.6.2",<% } %>
+		"durandal": ">=2.0.0",
+		"durandal-almond": "master",
+		"json2": "*"
+	}
+}

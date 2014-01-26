@@ -1,0 +1,45 @@
+﻿<div class="page-header">
+    <h1>
+        Home
+        <small><%= appname %></small>
+    </h1>
+</div>
+
+<h3>This page helps to start using this generator</h3>
+<p>Select a todo into the above list to show its details</p>
+
+<article class="row">
+    <div class="col-md-5">
+        <div class="list-group" data-bind="foreach: todos">
+            <a class="list-group-item"
+               data-bind="text: title, click: $root.selectedTodo, css: { active: $root.selectedTodo() == $data }"></a>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <!--ko with: selectedTodo-->
+            <div class="panel-heading">
+                <h3 class="panel-title" data-bind="text: title"></h3>
+            </div>
+            <div class="panel-body">
+                <p data-bind="html: content"></p>
+                <p>
+                    <button class="btn btn-primary" data-bind="click: $root.onTodoClick">View more</button>
+                </p>
+            </div>
+            <!--/ko-->
+            <!--ko ifnot: selectedTodo-->
+            <div class="panel-heading">
+                <h3 class="panel-title">No Todo Selected</h3>
+            </div>
+            <div class="panel-body">Select a todo in the list to show details</div>
+            <!--/ko-->
+        </div>
+    </div>
+</article>
+
+<p>
+    <button class="btn btn-primary" data-bind="click: onButtonClick">
+        Hello
+    </button>
+</p>
