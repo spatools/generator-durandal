@@ -1,0 +1,9 @@
+node_modules/
+temp/
+obj/
+bin/
+
+*.suo
+*.user
+*.csproj
+*.sln
