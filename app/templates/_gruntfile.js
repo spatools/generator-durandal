@@ -296,7 +296,7 @@ module.exports = function (grunt) {
 
         // Test your code with jasmine
         mocha: {
-            test: ["<%= paths.test %>/index.html"]
+            test: ["<%%= paths.test %>/index.html"]
         },
 
         // Watches files for changes and runs tasks based on the changed files
