@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-    require('load-grunt-tasks')(grunt, { pattern: ['grunt-*', '!grunt-template-jasmine-requirejs'] }); // Load grunt tasks automatically
+    require('load-grunt-tasks')(grunt); // Load grunt tasks automatically
     require('time-grunt')(grunt); // Time how long tasks take. Can help when optimizing build times
 
     var options = {
@@ -295,22 +295,8 @@ module.exports = function (grunt) {
         },
 
         // Test your code with jasmine
-        jasmine: {
-            all: {
-                options: {
-                    specs: '<%%= paths.test %>/spec/*.js',
-                    helpers: '<%%= paths.test %>/helpers/*.js',
-                    host: 'http://127.0.0.1:9001/',
-                    template: require('grunt-template-jasmine-requirejs'),
-                    templateOptions: {
-                        requireConfig: {
-                            baseUrl: '<%%= durandal.options.baseUrl %>/',
-                            paths: '<%%= durandal.options.paths %>',
-                            shim: '<%%= durandal.options.shim %>'
-                        }
-                    }
-                }
-            }
+        mocha: {
+            test: ["<%= paths.test %>/index.html"]
         },
 
         // Watches files for changes and runs tasks based on the changed files
@@ -425,7 +411,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('test', ['clean:server', 'copy:styles', 'autoprefixer:watch', 'connect:test', 'jasmine']);
+    grunt.registerTask('test', ['clean:server', 'copy:styles', 'autoprefixer:watch', 'connect:test', 'mocha']);
     grunt.registerTask('build', ['clean:release', 'concurrent:release', 'concat', 'autoprefixer:release', 'htmlbuild', 'htmlmin']);
     grunt.registerTask('default', ['newer:jshint', 'test', 'build']);
 
