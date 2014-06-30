@@ -1,6 +1,6 @@
 {
   "name": "generator-durandal",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Complete Yeoman generator for Durandal with subgenerators",
   "keywords": [
     "yeoman-generator",
