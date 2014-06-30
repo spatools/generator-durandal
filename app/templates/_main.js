@@ -4,7 +4,7 @@
         'durandal': '../bower_components/durandal/js',
         'plugins': '../bower_components/durandal/js/plugins',
         'transitions': '../bower_components/durandal/js/transitions',
-        'knockout': '../bower_components/knockout.js/knockout-2.3.0.debug',
+        'knockout': '../bower_components/knockout.js/knockout.debug',
         'jquery': '../bower_components/jquery/jquery',
         <% if (features.bootstrap) { %>'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap',<% } %>
         <% if (features.modernizr) { %>'modernizr': '../bower_components/modernizr/modernizr',<% } %>
