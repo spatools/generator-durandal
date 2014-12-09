@@ -111,7 +111,7 @@ DurandalGenerator.prototype.starter = function starter() {
 };
 
 DurandalGenerator.prototype.gruntfile = function gruntfile() {
-    this.template('_gruntfile.js', 'Gruntfile.js');
+    this.copy('_gruntfile.js', 'Gruntfile.js');
 };
 
 DurandalGenerator.prototype.package = function _package() {
