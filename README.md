@@ -57,7 +57,7 @@ $ grunt build
 #### test
 
 Use test configuration to test your application before building.
-It tests your application using [jasmine](http://pivotal.github.io/jasmine/) and [phantomjs](http://phantomjs.org/).
+It tests your application using [jasmine](https://jasmine.github.io/) and [phantomjs](http://phantomjs.org/).
 
 ```
 $ grunt test
